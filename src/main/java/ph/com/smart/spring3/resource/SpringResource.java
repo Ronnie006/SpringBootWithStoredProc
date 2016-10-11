@@ -17,10 +17,11 @@ public class SpringResource {
 	BranchRepository branchRepository;
 	
 	@RequestMapping(value="/test",method=RequestMethod.GET)
-	public void justMethod(){
+	public List<Branch> getBranches(){
 		List<Branch> branches = branchRepository.getBranches();
-		for(Branch branch: branches){
-			System.out.println(branch);
-		}
+//		for(Branch branch: branches){
+//			System.out.println(branch);
+//		}
+		return branches;
 	}
 }
